@@ -1,0 +1,225 @@
+
+@import url('../css/fonts.css');
+
+/* ------------ HTML e Body ------------*/
+html, body {
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+
+    /* Colori */
+
+    --white: whitesmoke;
+    --navBackground: #1e2040;
+    --hoverWhite: #c0c2c4;
+
+    /* Gradient Color */
+
+    --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+    /* Font-Families */
+
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cusrive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+/* ------------------- Classi Globali -------- */
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+ul{
+    list-style-type: none;
+}
+
+.flex-row{
+
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h1{
+
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h3{
+    
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+h2{
+
+    font-family: var(--Lexend);
+}
+
+button.btn{
+
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+/* ------------------- Classi Globali -------- */
+
+/* ------------------- NavBar ----------- */
+.nav{
+
+    background: var(--navBackground);
+    padding: 0 2rem; /*Top/Bottom e Left/Right */
+    height: 0rem;
+    min-height: 8vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .nav-menu{
+
+    justify-content: space-between;
+}
+
+.nav .nav-name a{
+
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Lexend);
+}
+
+.nav .toggle-collapse{
+
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none; /*Inizialmente non si vede l'icona*/
+}
+
+.nav .toggle-collapse .toggle-icons{
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+
+    font-size: 1.4rem;
+    color:var(--white);
+}
+
+.collapse{
+
+    height: 30rem;
+}
+
+.nav .nav-items{
+
+    display: flex;
+    margin: 0;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+
+    color: var(--white);
+}
+
+.nav .nav-items .nav-link{
+
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position:relative;
+    font-family: var(--Abel);
+}
+
+.nav .nav-items .nav-link:hover{
+
+    background-color: var(--white);
+}
+
+.nav .nav-items .nav-link:hover a{
+
+    color: var(--navBackground);
+}
+
+.nav .social{
+
+    padding: 1.4rem 0;
+}
+
+.nav .social i{
+
+    padding: 0 .2rem;
+}
+
+.nav .social i:hover{
+
+    color: var(--hoverWhite);
+}
+
+/* ------------------- NavBar ----------- */
+
+/* ------------------- Pagina Principale ------------- */
+
+main .site-title{
+
+    background:url("../Immagini/background.png");
+    background-size: cover;
+    height: 110vh;
+    display: flex;
+    justify-content:center;
+}
+
+main .site-title .site-background{
+
+    padding-top: 20rem;
+    text-align: center;
+    color: var(--white);
+}
+
+main .site-title .btn{
+
+    margin: 1.8rem;
+    background: var(--navBackground);
+    color: var(--white)
+}
+
+main .site-title .btn:hover{
+
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+main .site-title h1,h3 {
+
+    margin: .3rem;
+}
+
+/* Viewport a meno di 750px */
+
+@media only screen and (max-width: 878px) {
+
+.nav .nav-menu, .nav .nav-items{
+
+    flex-direction: column;
+}
+
+.nav .toggle-collapse{
+
+    display: initial; /*Sotto i 878px si vede */
+}
+}
