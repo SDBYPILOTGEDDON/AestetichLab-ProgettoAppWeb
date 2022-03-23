@@ -13,7 +13,7 @@ html, body {
     /* Colori */
 
     --white: whitesmoke;
-    --navBackground: #1e2040;
+    --navBackground: #3490c3;
     --hoverWhite: #c0c2c4;
 
     /* Gradient Color */
@@ -68,9 +68,17 @@ button.btn{
     border: none;
     border-radius: 2rem;
     padding: 1rem 3rem;
-    font-size: 1rem;
+    font-size: 1em;
     font-family: var(--Livvic);
     cursor: pointer;
+}
+
+span{
+    font-family: var(--Abel);
+}
+
+.container{
+    margin: 0 2.7vw;
 }
 
 /* ------------------- Classi Globali -------- */
@@ -94,15 +102,15 @@ button.btn{
 .nav .nav-name a{
 
     font-size: 1.6rem;
-    padding: 1rem 0;
+    padding: 1rem 0rem;
     display: block;
-    font-family: var(--Lexend);
+    font-family: var(--Abel);
 }
 
 .nav .toggle-collapse{
 
     position: absolute;
-    top: 0%;
+    top: -1.5%;
     width: 90%;
     cursor: pointer;
     display: none; /*Inizialmente non si vede l'icona*/
@@ -178,7 +186,7 @@ main .site-title{
 
     background:url("../Immagini/background.png");
     background-size: cover;
-    height: 110vh;
+    height: 100vh;
     display: flex;
     justify-content:center;
 }
@@ -209,9 +217,74 @@ main .site-title h1,h3 {
     margin: .3rem;
 }
 
+/* ------------------- Pagina Principale ------------- */
+
+/* ------------------- Carousel ------------- */
+
+main .blog{
+    background: var(--navBackground);
+    height: 100vh;
+    width: 100%;
+}
+
+main .blog .blog-post{
+    padding-top: 4rem;
+}
+
+main .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 70%;
+    margin: 2rem 3rem;
+    box-shadow: 0px 10px 20px black;
+    background: var(--white);
+}
+
+main .blog-content .blog-title{
+    padding: 2rem 0;
+}
+
+main .blog-content .btn-blog{
+    padding: .7rem 2rem;
+    background: var(--sky);
+    margin: .5rem;
+}
+
+main .blog-content span{
+    display: block;
+}
+
+section .container .owl-nav{
+
+    position: absolute;
+    top: 0%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+
+    color: var(--white);
+    background: transparent;
+    font-size: 2rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background:transparent;
+    color: var(--white);
+}
+
+.owl-theme .owl-nav [class*='owl-']{
+    outline: none;
+}
+
+/* ------------------- Carousel ------------- */
+
 /* Viewport a meno di 750px */
 
-@media only screen and (max-width: 878px) {
+@media only screen and (max-width: 937px) {
 
 .nav .nav-menu, .nav .nav-items{
 
